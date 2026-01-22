@@ -1,0 +1,8 @@
+section h1{
+    margin-left: 750px;
+    background-image: linear-gradient(90deg,  #DA291C , #FFCD00 , #006DB7);
+    width: max-content;
+    background-clip: text;
+    color: transparent;
+
+}
