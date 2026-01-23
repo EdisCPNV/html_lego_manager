@@ -1,0 +1,21 @@
+.content input{
+    height: 40px;
+    width: 350px;
+    border-radius: 12px;
+    margin: 20px 10px 10px 10px;
+}
+
+
+.box{
+    background-color: aqua;
+    display: flex;
+     flex-direction: row;   
+    margin: 20px 0px 0px 0px;    
+
+}
+
+.box_info{
+    background-color: black;
+    height: 386px;
+    width: 100%;
+}
