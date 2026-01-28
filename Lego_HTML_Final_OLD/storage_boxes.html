@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Inventor Manager - Stockage</title>
+    <link rel="stylesheet" href="everything.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo-container">
+        <img src="images/logo-lego-final.png" alt="logo">
+    </div>
+    <a href="admin_kits.html" >
+               <img src="icons/kit-icon.svg" alt="Build icon" class="menu-icon">
+        Kits
+    </a>
+    <a href="admin-build.html" >
+               <img src="icons/build-icon.svg" alt="Build icon" class="menu-icon">
+        Build
+    </a>
+    <a href="storage.html">
+               <img src="icons/storage-icon.svg" alt="Build icon" class="menu-icon">
+        Stockage
+    </a>
+    <a href="storage_boxes.html" class="active">
+               <img src="icons/boxes-icon.svg" alt="Build icon" class="menu-icon">
+        Boites
+    </a>
+    <a href="storage_cupboard.html">
+               <img src="icons/cupboard-icon.svg" alt="Build icon" class="menu-icon">
+        Armoires
+    </a>
+    <a href="storage_location.html">
+               <img src="icons/location-icon.svg" alt="Build icon" class="menu-icon">
+        Localisation
+    </a>
+<a href="login.html" class="menu-item logout" onclick="sessionStorage.clear()">
+    <img src="icons/logout-icon.svg" alt="Logout" class="menu-icon">
+    Logout
+</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Search Bar -->
+    <div class="search-container">
+        <span></span>
+        <input type="text" class="search-input" id="searchInput" placeholder="Que cherchez-vous ?" onkeyup="filterTable()">
+        <button class="btn-search" onclick="filterTable()">Rechercher</button>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">Boîtes</div>
+
+    <!-- Table Container -->
+    <div class="table-container">
+        <table class="stockage-table">
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>N°Boîte</th>
+                    <th>Taille de la boîte</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>
+                        <a href="admin_modify_boxes.html?numero=AC221&taille=Grand" class="action-link modify">Modifier</a><br>
+                        <a href="#" onclick="confirmDelete('AC221'); return false;" class="action-link delete">Supprimer</a>
+                    </td>
+                    <td>AC221</td>
+                    <td>Grand</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin_modify_boxes.html?numero=AC222&taille=Moyen" class="action-link modify">Modifier</a><br>
+                        <a href="#" onclick="confirmDelete('AC222'); return false;" class="action-link delete">Supprimer</a>
+                    </td>
+                    <td>AC222</td>
+                    <td>Moyen</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin_modify_boxes.html?numero=AC223&taille=Petite" class="action-link modify">Modifier</a><br>
+                        <a href="#" onclick="confirmDelete('AC223'); return false;" class="action-link delete">Supprimer</a>
+                    </td>
+                    <td>AC223</td>
+                    <td>Petite</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="buttons-container">
+        <button class="btn-add" onclick="window.location.href='admin-add-boxes.html'">Ajouter une Boîte</button>
+    </div>
+</div>
+
+</body>
+</html>
